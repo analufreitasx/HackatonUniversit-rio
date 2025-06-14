@@ -3,7 +3,7 @@ public abstract class Pessoa {
     private Instituicao instituicao;
 
     //construtor
-    public Pessoa(Strig nome, Instituicao instituicao) {
+    public Pessoa(String nome, Instituicao instituicao) {
         this.nome = nome;
         this.instituicao = instituicao;
     }
