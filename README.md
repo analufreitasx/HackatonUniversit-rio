@@ -1,4 +1,4 @@
-# HackatonUniversit-rio
+# Trabalho Programação Modular - Hackaton Universitário
 
 Alunas:
 Ana Luiza de Freitas Rodrigues \
