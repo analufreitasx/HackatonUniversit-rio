@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Map;
 
 public class Apresentacao {
@@ -38,13 +39,24 @@ public class Apresentacao {
     public void setDataHora(LocalDateTime dataHora) {
         this.dataHora = dataHora;
     }
-    
-    public void avaliar(List<int> notas) {
-        if(banca instanceof Banca) {
-            for(Map.Entry<Jurado, Integer> banca : ((Banca) banca).getJurados().entrySet()){
 
+    public void avaliar(List<Integer> notas) {
+        if (banca instanceof Banca) {
+            Banca bancaObj = (Banca) banca;
+            Map<Jurado, Integer> jurados = bancaObj.getJurados();
+
+            if (notas.size() < jurados.size()) {
+                throw new IllegalArgumentException("Lista de notas menor que o número de jurados.");
             }
-        }
 
+            int i = 0;
+            for (Jurado jurado : jurados.keySet()) {
+                jurados.replace(jurado, notas.get(i));
+                i++;
+            }
+            bancaObj.setJurados(jurados);
+        } else {
+            throw new IllegalStateException("Objeto banca não é do tipo Banca.");
+        }
     }
 }
