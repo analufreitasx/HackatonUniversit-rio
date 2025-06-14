@@ -1,5 +1,5 @@
 public abstract class Instituicao {
-    private String nome;
+    protected String nome;
 
     //gets e sets
 
