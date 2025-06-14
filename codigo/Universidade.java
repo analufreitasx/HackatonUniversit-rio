@@ -1,5 +1,6 @@
 public class Universidade extends Instituicao{
     private int idUniversidade;
+
     public void setNome(String nome){
         this.nome = nome;
     }
