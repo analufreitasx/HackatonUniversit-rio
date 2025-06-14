@@ -6,7 +6,7 @@ public class Empresa extends Instituicao{
         this.cnpj = cnpj;
     }
 
-    public void getNome(String nome){
+    public String getNome(String nome){
 
         return nome;
     }

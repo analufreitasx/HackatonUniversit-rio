@@ -11,7 +11,6 @@ public class Banca implements Avaliavel {
         addJuradoBanca(jurado3);
         addJuradoBanca(jurado4);
     }
-
     public void setProjetoAvaliado(Projeto projetoAvaliado) {
         this.projetoAvaliado = projetoAvaliado;
     }
@@ -20,6 +19,12 @@ public class Banca implements Avaliavel {
         return projetoAvaliado;
     }
 
+    public void setJurados(Map<Jurado, Integer> jurados) {
+        this.jurados = jurados;
+    }
+    public Map<Jurado, Integer> getJurados() {
+        return jurados;
+    }
     public void addJuradoBanca(Jurado jurado) {
         if(jurados.size() <= 4){
             jurados.put(jurado, 0);
