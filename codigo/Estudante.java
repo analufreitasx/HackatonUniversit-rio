@@ -6,10 +6,10 @@ public class Estudante extends Pessoa {
         this.matricula = matricula;
     }
 
-    public String getMatricula() {
+    public int getMatricula() {
         return matricula;
     }
-    public void setMatricula(Int matricula) {
+    public void setMatricula(int matricula) {
         this.matricula = matricula;
     }
 }
