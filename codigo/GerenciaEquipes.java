@@ -2,14 +2,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class gerenciaEquipes {
-    private static gerenciaEquipes instancia;
+    private static GerenciaEquipes instancia;
     private List<Equipe> listaEquipes;
 
-    private Equipes() {
+    private GerenciaEquipes() {
         listaEquipes = new ArrayList<>();
     }
 
-    public static Equipes getInstancia() {
+    public static GerenciaEquipes getInstancia() {
         if (instancia == null) {
             instancia = new Equipes();
         }
