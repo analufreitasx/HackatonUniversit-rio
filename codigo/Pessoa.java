@@ -3,7 +3,6 @@ public abstract class Pessoa {
     private Instituicao instituicao;
 
     //gets e sets
-
     public void setNome(String nome) {
         this.nome = nome;
     }
