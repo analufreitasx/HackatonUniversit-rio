@@ -4,29 +4,42 @@ public class Projeto {
     private int notaFinal;
     private String nome;
 
+    //construtor
+    public Projeto(String nome, Profissional orientador, Equipe equipe) {
+        this.nome = nome;
+        this.orientador = orientador;
+        this.equipe = equipe;
+        this.notaFinal = 0;
+    }
+
     //gets e sets
+    public String getNome() {
+        return nome;
+    }
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public void setProfissional(Profissional orientado) {
-        this.orientador = orientado;
-    }
-    public void setEquipe(Equipe equipe) {
-        this.equipe = equipe;
-    }
-    public void setNotaFinal(int notaFinal) {
-        this.notaFinal = notaFinal;
-    }
-    public Profissional getOrientado() {
+    public Profissional getOrientador() {
         return orientador;
+    }
+    public void setProfissional(Profissional orientador) {
+        this.orientador = orientador;
     }
     public Equipe getEquipe() {
         return equipe;
     }
+    public void setEquipe(Equipe equipe) {
+        this.equipe = equipe;
+    }
     public int getNotaFinal() {
         return notaFinal;
     }
-    public String getNome() {
-        return nome;
+    public void setNotaFinal(int notaFinal) {
+        this.notaFinal = notaFinal;
+    }
+
+    @Override
+    public String toString() {
+        return "Projeto: " + nome + ", Nota Final: " + notaFinal;
     }
 }
