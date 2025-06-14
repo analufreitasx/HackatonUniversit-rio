@@ -41,7 +41,7 @@ public class Banca implements Avaliavel {
             jurados.put(jurado, nota);
         }
     }
-    
+
     @Override
     public void calcularNotaFinal(){
         int notaFinal = 0;

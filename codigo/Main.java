@@ -52,6 +52,8 @@ public class Main {
 
         System.out.println(apresentacao1.toString());
         System.out.println(apresentacao2.toString());
+        System.out.println("Nota Final - Projeto 1: " + projeto1.getNotaFinal());
+        System.out.println("Nota Final - Projeto 2: " +projeto2.getNotaFinal());
 
         GerenciaApresentacoes.getInstancia().getTodasApresentacoes().stream()
                 .filter(aprov -> aprov.getProjeto().getNotaFinal() >= 7)
