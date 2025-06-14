@@ -1,2 +1,2 @@
-public class Profissional {
+public class Profissional extends Pessoa{
 }

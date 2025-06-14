@@ -1,2 +1,2 @@
-public class Jurado {
+public class Jurado extends Profissional {
 }
