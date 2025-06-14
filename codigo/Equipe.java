@@ -14,7 +14,7 @@ public class Equipe {
     public void adicionarEstudante(Estudante estudante) {
         integrantes.add(estudante);
     }
-    public list<Estudante> getIntegrantes() {
+    public List<Estudante> getIntegrantes() {
         return integrantes;
     }
 }
