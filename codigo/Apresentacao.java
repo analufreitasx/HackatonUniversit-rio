@@ -4,7 +4,32 @@ public class Apresentacao {
     private Projeto projeto;
     private Avaliavel banca;
     private Sala local;
-    private LocalDateTime dataHota;
+    private LocalDateTime dataHora;
 
+    public Projeto getProjeto() {
+        return projeto;
+    }
+    public void setProjeto(Projeto projeto) {
+        this.projeto = projeto;
+    }
+    public Avaliavel getBanca() {
+        return banca;
+    }
+    public void setBanca(Avaliavel banca) {
+        this.banca = banca;
+    }
+    public Sala getLocal() {
+        return local;
+    }
+    public void setLocal(Sala local) {
+        this.local = local;
+    }
+    public LocalDateTime getDataHora() {
+        return dataHora;
+    }
+    public void setDataHora(LocalDateTime dataHora) {
+        this.dataHora = dataHora;
+    }
+    
     public void avaliar() {}
 }
