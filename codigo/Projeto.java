@@ -4,15 +4,13 @@ public class Projeto {
     private int notaFinal;
     private String nome;
 
-    //construtor
     public Projeto(String nome, Profissional orientador, Equipe equipe) {
         this.nome = nome;
         this.orientador = orientador;
         this.equipe = equipe;
         this.notaFinal = 0;
     }
-
-    //gets e sets
+    
     public String getNome() {
         return nome;
     }

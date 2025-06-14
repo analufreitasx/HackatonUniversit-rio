@@ -1,7 +1,6 @@
 public class Empresa extends Instituicao{
     private int cnpj;
 
-    //gets e sets
     public void setNome(String nome){
         this.nome = nome;
     }

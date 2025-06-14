@@ -2,13 +2,11 @@ public abstract class Pessoa {
     private String nome;
     private Instituicao instituicao;
 
-    //construtor
     public Pessoa(Strig nome, Instituicao instituicao) {
         this.nome = nome;
         this.instituicao = instituicao;
     }
 
-    //gets e sets
     public String getNome() {
         return nome;
     }
