@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
         Instituicao universidade = new Universidade("PUC Minas", 1);
+        Sala sala1 = new Sala("Sala 101");
 
         Equipe equipe1 = new Equipe("Equipe A");
         Equipe equipe2 = new Equipe("Equipe B");
@@ -14,8 +15,8 @@ public class Main {
             equipe2.adicionarEstudante(new Estudante("Aluno B" + i, universidade, 1000 + i));
         }
 
-        Profissional orientador1 = new Profissional("Ana", universidade, "Professora");
-        Profissional orientador2 = new Profissional("Julia", universidade, "Professora");
+        Profissional orientador1 = new Profissional("Ana", universidade, "Professora de Programação Modular");
+        Profissional orientador2 = new Profissional("Julia", universidade, "Professora de Web Design");
 
         Projeto projeto1 = new Projeto("Projeto A", equipe1, orientador1);
         Projeto projeto2 = new Projeto2("Projeto B", equipe2, orientador2);
@@ -29,5 +30,18 @@ public class Main {
         Jurado jurado6 = new Jurado("Joao", universidade, "Redes de Computadores", 6);
         Jurado jurado7 = new Jurado("Leticia", universidade, "Banco de Dados", 7);
         Jurado jurado8 = new Jurado("Isadora", universidade, "Cloud Computing", 8);
+
+        Banca banca1 = new Banca(projeto1, jurado1, jurado2, jurado3, jurado4);
+        Banca banca2 = new Banca(projeto2, jurado5, jurado6, jurado7, jurado8);
+
+        Apresentacao apresentacao1 = new Apresentacao(projeto1, banca1, sala1, LocalDateTime.now());
+        Apresentacao apresentacao2 = new Apresentacao(projeto2, banca2, sala1, LocalDateTime.now());
+
+        apresentacao1.avaliar(Arrays.asList(8, 9, 7, 6));
+        apresentacao2.avaliar(Arrays.asLista(5, 6, 7, 6));
+
+        banca1.calcularNotaFinal();
+        banca2.calcularNotaFinal();
+
     }
 }
