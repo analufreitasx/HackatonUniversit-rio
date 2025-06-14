@@ -4,8 +4,12 @@ public class Banca implements Avaliavel {
     private Projeto projetoAvaliado;
     private Map<Jurado, Integer> jurados;
 
-    public Banca(Projeto projetoAvaliado) {
+    public Banca(Projeto projetoAvaliado, Jurado jurado, Jurado jurado2, Jurado jurado3, Jurado jurado4 ) {
         this.projetoAvaliado = projetoAvaliado;
+        addJuradoBanca(jurado);
+        addJuradoBanca(jurado2);
+        addJuradoBanca(jurado3);
+        addJuradoBanca(jurado4);
     }
 
     public void setProjetoAvaliado(Projeto projetoAvaliado) {
@@ -17,10 +21,16 @@ public class Banca implements Avaliavel {
     }
 
     public void addJuradoBanca(Jurado jurado) {
-        jurados.put(jurado, 0);
+        if(jurados.size() <= 4){
+            jurados.put(jurado, 0);
+        }
+        else{
+            System.out.println("Erro: Número máximo de jurados atingido.");
+        }
     }
 
-    public void CalcularNotaFinal(){
+    @Override
+    public void calcularNotaFinal(){
         int notaFinal = 0;
         for(Map.Entry<Jurado, Integer> jurado : jurados.entrySet()){
             notaFinal += jurado.getValue();
