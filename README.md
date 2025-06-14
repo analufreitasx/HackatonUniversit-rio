@@ -1,5 +1,5 @@
-# Trabalho Programação Modular - Hackaton Universitário
+# Hackaton Universitário
 
-Alunas:
+#Alunas:
 Ana Luiza de Freitas Rodrigues \
 Júlia de Souza Ventura
