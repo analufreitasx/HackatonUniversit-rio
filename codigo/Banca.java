@@ -1,8 +1,9 @@
 import java.util.Map;
+import java.util.HashMap;
 
 public class Banca implements Avaliavel {
     private Projeto projetoAvaliado;
-    private Map<Jurado, Integer> jurados;
+    private Map<Jurado, Integer> jurados = new HashMap<>();
 
     public Banca(Projeto projetoAvaliado, Jurado jurado, Jurado jurado2, Jurado jurado3, Jurado jurado4 ) {
         this.projetoAvaliado = projetoAvaliado;
@@ -26,11 +27,17 @@ public class Banca implements Avaliavel {
         return jurados;
     }
     public void addJuradoBanca(Jurado jurado) {
-        if(jurados.size() <= 4){
+        if(jurados.size() < 4){
             jurados.put(jurado, 0);
         }
         else{
             System.out.println("Erro: Número máximo de jurados atingido.");
+        }
+    }
+
+    public void registrarNota(Jurado jurado, int nota) {
+        if (jurados.containsKey(jurado)) {
+            jurados.put(jurado, nota);
         }
     }
 
