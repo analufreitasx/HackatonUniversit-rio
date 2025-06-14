@@ -13,4 +13,9 @@ public class Jurado extends Profissional {
     public void setIdJurado(int idJurado) {
         this.idJurado = idJurado;
     }
+
+    @Override
+    public String toString() {
+        return "Jurado: " + super.getNome() + super.getInstituicao() + super.getProfissao() + idJurado;
+    }
 }

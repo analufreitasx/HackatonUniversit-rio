@@ -54,9 +54,12 @@ public class Apresentacao {
                 jurados.replace(jurado, notas.get(i));
                 i++;
             }
-            bancaObj.setJurados(jurados);
         } else {
             throw new IllegalStateException("Objeto banca não é do tipo Banca.");
         }
+    }
+    @Override
+    public String toString() {
+        return projeto.toString() + ", Banca: " + ((Banca) banca).toString() + ", Local: " + local.toString() + ", Data: " + dataHora.toString();
     }
 }

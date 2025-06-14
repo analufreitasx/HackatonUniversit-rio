@@ -10,6 +10,10 @@ public class Equipe {
         this.integrantes = integrantes;
     }
 
+    public Equipe(String nome) {
+        this.nome = nome;
+    }
+
     public String getNome() {
         return nome;
     }

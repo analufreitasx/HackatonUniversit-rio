@@ -17,6 +17,10 @@ public class GerenciaApresentacoes {
         listaApresentacoes.add(apresentacao);
     }
 
+    public List<Apresentacao> getTodasApresentacoes() {
+        return listaApresentacoes;
+    }
+
     public Apresentacao buscarApresentacao(Projeto projeto){
         for(Apresentacao apresentacao : listaApresentacoes){
             if(apresentacao.getProjeto().equals(projeto)){

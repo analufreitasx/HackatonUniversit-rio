@@ -6,10 +6,11 @@ public class Empresa extends Instituicao{
         this.cnpj = cnpj;
     }
 
-    public String getNome(String nome){
-
+    @Override
+    public String getNome(){
         return nome;
     }
+
     public void setNome(String nome){
         this.nome = nome;
     }
@@ -17,7 +18,7 @@ public class Empresa extends Instituicao{
 
         return cnpj;
     }
-    public int setCNPJ(int CNPJ){
+    public void setCNPJ(int CNPJ){
         this.cnpj = cnpj;
     }
 }

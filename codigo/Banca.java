@@ -1,5 +1,6 @@
 import java.util.Map;
 import java.util.HashMap;
+import java.util.stream.Collectors;
 
 public class Banca implements Avaliavel {
     private Projeto projetoAvaliado;
@@ -40,7 +41,7 @@ public class Banca implements Avaliavel {
             jurados.put(jurado, nota);
         }
     }
-
+    
     @Override
     public void calcularNotaFinal(){
         int notaFinal = 0;
@@ -50,5 +51,6 @@ public class Banca implements Avaliavel {
         notaFinal /= jurados.size();
         projetoAvaliado.setNotaFinal(notaFinal);
     }
+
 
 }
