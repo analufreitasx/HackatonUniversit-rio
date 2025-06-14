@@ -5,16 +5,21 @@ public class Equipe {
     private String nome;
     private List<Estudante> integrantes = new ArrayList<>();
 
-    public void setNome(String nome) {
+    public Equipe(String nome, List<Estudante> integrantes) {
         this.nome = nome;
+        this.integrantes = integrantes;
     }
+
     public String getNome() {
         return nome;
     }
-    public void adicionarEstudante(Estudante estudante) {
-        integrantes.add(estudante);
+    public void setNome(String nome) {
+        this.nome = nome;
     }
     public List<Estudante> getIntegrantes() {
         return integrantes;
+    }
+    public void adicionarEstudante(Estudante estudante) {
+        integrantes.add(estudante);
     }
 }
