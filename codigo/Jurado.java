@@ -1,3 +1,16 @@
 public class Jurado extends Profissional {
-    private String idJurado;
+    private int idJurado;
+
+    public Jurado(String nome, Instituicao instituicao, String Profissao, int idJurado) {
+        super(nome, instituicao, profissao);
+        this.idJurado = idJurado;
+    }
+
+    public int getIdJurado() {
+        return idJurado;
+    }
+
+    public void setIdJurado(int idJurado) {
+        this.idJurado = idJurado;
+    }
 }
