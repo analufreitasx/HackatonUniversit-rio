@@ -63,7 +63,7 @@ public class Main {
         for (Apresentacao apresentacao : GerenciaApresentacoes.getInstancia().getTodasApresentacoes()) {
             Projeto projeto = apresentacao.getProjeto();
             System.out.println("Projeto: " + projeto.getNome());
-            //System.out.println("Equipe: " + projeto.getEquipe().getNome());
+            System.out.println("Equipe: " + projeto.getEquipe().getNome());
             System.out.println("Orientador: " + projeto.getOrientador().getNome() + " - " + projeto.getOrientador().getProfissao());
             System.out.println();
         }

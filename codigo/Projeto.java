@@ -7,9 +7,7 @@ public class Projeto {
     public Projeto(String nome, Profissional orientador, Equipe equipe) {
         this.nome = nome;
         this.orientador = orientador;
-        if (GerenciaEquipes.getInstancia().buscarPorNome(equipe.getNome()) == null) {
-            this.equipe = equipe;
-        }
+        this.equipe = equipe;
         this.notaFinal = 0;
     }
     
