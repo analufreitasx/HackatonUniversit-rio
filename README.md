@@ -25,7 +25,9 @@ O principal foco desta aplicação é implementar as funcionalidades responsáve
 - Cadastro e agendamento das Apresentações
 - Listagem de todos os projetos que atingiram nota final ≥ 7 (usando Streams API)
 
-## 📚 Documentação
+## 📚 Diagrama UML
+
+![Diagrama UML](DiagramaHackatons.png)
 
 ## 👩‍💻 Desenvovedoras
 - Ana Luiza de Freitas Rodrigues
