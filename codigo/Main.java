@@ -49,13 +49,51 @@ public class Main {
 
         banca1.calcularNotaFinal();
         banca2.calcularNotaFinal();
-        
-        System.out.println("Nota Final - Projeto 1: " + projeto1.getNotaFinal());
-        System.out.println("Nota Final - Projeto 2: " +projeto2.getNotaFinal());
 
+        System.out.println("\n==== Listagem das Equipes e seus Alunos ====");
+        for (Equipe equipe : GerenciaEquipes.getInstancia().getTodasEquipes()) {
+            System.out.println(equipe.getNome() + ":");
+            for (Estudante aluno : equipe.getIntegrantes()) {
+                System.out.println("- " + aluno.getNome());
+            }
+            System.out.println();
+        }
+
+        System.out.println("\n==== Informações dos Projetos Criados ====");
+        for (Apresentacao apresentacao : GerenciaApresentacoes.getInstancia().getTodasApresentacoes()) {
+            Projeto projeto = apresentacao.getProjeto();
+            System.out.println("Projeto: " + projeto.getNome());
+            //System.out.println("Equipe: " + projeto.getEquipe().getNome());
+            System.out.println("Orientador: " + projeto.getOrientador().getNome() + " - " + projeto.getOrientador().getProfissao());
+            System.out.println();
+        }
+
+        System.out.println("==== Jurados de Cada Banca ====");
+        for (Apresentacao apresentacao : GerenciaApresentacoes.getInstancia().getTodasApresentacoes()) {
+            Banca banca = (Banca) apresentacao.getBanca();
+            System.out.println("Banca " + banca.getProjetoAvaliado().getNome() + ":");
+            for (Jurado jurado : banca.getJurados().keySet()) {
+                System.out.println("- " + jurado.getNome() + " (" + jurado.getProfissao() + ")");
+            }
+            System.out.println();
+        }
+
+        System.out.println("==== Notas e Média Final de Cada Projeto ====");
+        for (Apresentacao apresentacao : GerenciaApresentacoes.getInstancia().getTodasApresentacoes()) {
+            Projeto projeto = apresentacao.getProjeto();
+            Banca banca = (Banca) apresentacao.getBanca();
+            System.out.println("Notas " + projeto.getNome() + ":");
+            for (Jurado jurado : banca.getJurados().keySet()) {
+                System.out.println(jurado.getNome() + ": " + banca.getJurados().get(jurado));
+            }
+            System.out.println("Média Final: " + projeto.getNotaFinal());
+            System.out.println();
+        }
+
+        System.out.println("==== Projetos Aprovados (Nota >= 7) ====");
         GerenciaApresentacoes.getInstancia().getTodasApresentacoes().stream()
                 .filter(aprov -> aprov.getProjeto().getNotaFinal() >= 7)
                 .forEach(aprov -> System.out.println("Projeto aprovado: " + aprov.getProjeto().getNome() + " - Nota Final: " + aprov.getProjeto().getNotaFinal()));
-
+        
     }
 }
